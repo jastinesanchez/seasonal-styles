@@ -1,0 +1,70 @@
+<html>
+    <head>
+
+        <title>jQuery Test Page</title>
+        <script src = "https://code.jquery.com/jquery-latest.js"></script>
+    </head> 
+    <body>
+        <h1>Testing html page</h1>
+        <div id="myDiv">This is my div lol
+            <ul>
+                <li>Me is list item, u w u </li>
+                <li>Me is list item, u w u </li>
+                <li>Me is list item, u w u </li>
+                <li>Me is list item, u w u </li>
+                <li>Me is list item, u w u </li>
+                <li>Me is list item, u w u </li>
+                <li>Me is list item, u w u </li>
+
+
+
+
+            </ul>
+
+
+
+
+        </div>
+        <script>
+
+        //alert("this is not jQuery you stupid shit lol");
+
+
+            $(function(){
+
+               // alert("What $ makes its short like you? Dang you short buddy");
+
+               /*
+               $("div#myDiv").css("border", "2px solid red");
+               $("div#myDiv").css("background-color", "pink");
+               $("div#myDiv").append(" Now this gets added to the div yo!");
+               $("div#myDiv").fadeOut();
+
+               we are not using this now
+               */ 
+
+                /* let $thisDiv = $("div#myDiv");
+
+                $thisDiv.css("border", "2px solid red").css("background-color", "pink").append(" Now this gets added to the div yo!");
+                */
+
+                $("div#myDiv li:even").css("background-color", "aqua");
+                $("div#myDiv").hide().fadeIn(5000, function(){
+
+                    $("div#myDiv li").each(function(){
+
+                        $(this).slideDown(2000);
+
+                    });
+
+                });
+
+
+
+            });
+
+
+
+        </script>
+    </body>
+</html>
