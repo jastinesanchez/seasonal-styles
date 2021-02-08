@@ -59,12 +59,12 @@
 	    <img src="images/four-seasons.gif" alt="Seasonal Logo Goes Here" class="flexible" id="logo" />
 		<h1 class="masthead">Eddie Browser</h1>
 		<nav>
-			<ul>
-				<li class="seasons"><a href="Default">Default</a></li>
-				<li class="seasons"><a href="Spring">Spring</a></li>
-				<li class="seasons"><a href="Summer">Summer</a></li>
-				<li class="seasons"><a href="Fall">Fall</a></li>
-				<li class="seasons"><a href="Winter">Winter</a></li>
+			<ul class = "seasons">
+				<li><a href="Default">Default</a></li>
+				<li><a href="Spring">Spring</a></li>
+				<li><a href="Summer">Summer</a></li>
+				<li><a href="Fall">Fall</a></li>
+				<li><a href="Winter">Winter</a></li>
 			</ul>
 		</nav>
 	</header>
@@ -105,8 +105,30 @@
 	$("document").ready(function(){
 		$('.seasons a').click(function(e){//find all a tags inside class of seasons
             e.preventDefault();//stop default submission
-			var season = $(this).attr("href");//contents of href attribute of this element
-			alert(season);
+			let season = $(this).attr("href");//contents of href attribute of this element
+			//alert(season);
+
+			//convert to lower case to see more easily
+			season = season.toLowerCase();
+
+			
+
+			switch (season)
+			{
+				case 'spring' :
+					//alert("Yay its spring fever lol!");
+					$("#logo").attr("src","images/spring.gif");
+					$("#wear").attr("src","images/spring-wear.jpg");
+					$("html").css("background-color","#2B7129");
+					$("main header h3").html("Spring into the Spring Wear!");
+				break;
+
+
+				default: 
+					alert("Ayyy this is the default buddy lolol");
+
+			
+			}
 		});
 	});
     </script>
